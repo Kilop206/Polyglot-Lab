@@ -1,0 +1,7 @@
+{
+  "name": "invalid-length ping-with-payload",
+  "valid": false,
+  "expected_error": "INVALID_LENGTH",
+  "wire_hex": "4E4C01100000000000010000000578",
+  "sha256": "fa174e28ce6828efd44bfc88edcc8c1f8e17ede57d802dc7ada18df900b53dfe"
+}

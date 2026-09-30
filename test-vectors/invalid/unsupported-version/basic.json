@@ -1,0 +1,7 @@
+{
+  "name": "unsupported-version basic",
+  "valid": false,
+  "expected_error": "UNSUPPORTED_VERSION",
+  "wire_hex": "4E4C021000000000000000000001",
+  "sha256": "0b9ef9582fd90a50624a9e01e1f7c664fb8845c52a97eae02444e03f8ee8ff66"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "PING latency",
+  "message_type": "PING",
+  "response_type": "PONG",
+  "payload_size": 0,
+  "warmup_requests": 50,
+  "requests": 1000
+}

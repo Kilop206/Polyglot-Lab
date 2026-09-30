@@ -1,0 +1,7 @@
+{
+  "name": "invalid-magic basic",
+  "valid": false,
+  "expected_error": "INVALID_MAGIC",
+  "wire_hex": "5858011000000000000000000001",
+  "sha256": "f498aac7d006d48f111e3a7f895ebaef8f36dec8812d61f2355c835a268e09dd"
+}

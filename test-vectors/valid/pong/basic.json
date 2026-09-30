@@ -1,0 +1,11 @@
+{
+  "name": "pong basic",
+  "valid": true,
+  "message_type": "PONG",
+  "message_type_code": "0x11",
+  "request_id": 42,
+  "flags": 0,
+  "payload_hex": "",
+  "wire_hex": "4E4C01110000000000000000002A",
+  "sha256": "f47ee82d5f51ab490988c22e2f85f97956e2bb5689e377e0341f7affbcde956f"
+}

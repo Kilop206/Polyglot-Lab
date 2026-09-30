@@ -1,0 +1,11 @@
+{
+  "name": "hello-ack basic",
+  "valid": true,
+  "message_type": "HELLO_ACK",
+  "message_type_code": "0x02",
+  "request_id": 1,
+  "flags": 0,
+  "payload_hex": "6E65746C61622D746573742D736572766572",
+  "wire_hex": "4E4C0102000000000012000000016E65746C61622D746573742D736572766572",
+  "sha256": "7d3db81677f44d40fac2ba5f785ebd992140dbf10867f0a919d05b40ff86ed33"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "invalid-flags basic",
+  "valid": false,
+  "expected_error": "INVALID_FLAGS",
+  "wire_hex": "4E4C011000010000000000000001",
+  "sha256": "bd4d5e60af0acbba730cc1c700dd63e4b135193c581f97e28128188eded9f592"
+}

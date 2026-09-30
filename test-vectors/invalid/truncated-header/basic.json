@@ -1,0 +1,7 @@
+{
+  "name": "truncated-header basic",
+  "valid": false,
+  "expected_error": "INCOMPLETE_FRAME",
+  "wire_hex": "4E4C0110000000",
+  "sha256": "5210998accc7f9c5386977da64737996f2e4b5eb29e17fbd57f6ee894ef6aae2"
+}

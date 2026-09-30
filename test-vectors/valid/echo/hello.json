@@ -1,0 +1,11 @@
+{
+  "name": "echo hello",
+  "valid": true,
+  "message_type": "ECHO",
+  "message_type_code": "0x20",
+  "request_id": 100,
+  "flags": 0,
+  "payload_hex": "68656C6C6F",
+  "wire_hex": "4E4C01200000000000050000006468656C6C6F",
+  "sha256": "a8067ae9ffbccdc22d4f0249a2e089052bfc74654c03a42e96ffc5547135d3ae"
+}

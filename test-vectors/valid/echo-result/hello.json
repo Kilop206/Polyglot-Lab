@@ -1,0 +1,11 @@
+{
+  "name": "echo-result hello",
+  "valid": true,
+  "message_type": "ECHO_RESULT",
+  "message_type_code": "0x21",
+  "request_id": 100,
+  "flags": 0,
+  "payload_hex": "68656C6C6F",
+  "wire_hex": "4E4C01210000000000050000006468656C6C6F",
+  "sha256": "ddd1b44817e4a195ca1d9915a695cd8a23225ac94f3c2d668db99f25109a8f6d"
+}

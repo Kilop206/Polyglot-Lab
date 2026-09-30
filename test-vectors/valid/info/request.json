@@ -1,0 +1,11 @@
+{
+  "name": "info request",
+  "valid": true,
+  "message_type": "INFO",
+  "message_type_code": "0x30",
+  "request_id": 7,
+  "flags": 0,
+  "payload_hex": "",
+  "wire_hex": "4E4C013000000000000000000007",
+  "sha256": "0fc33c08e689e3c884e6295795d1e5bc98a315c5bf6c7111017e47e527e78fa1"
+}

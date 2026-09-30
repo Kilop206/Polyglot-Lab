@@ -1,0 +1,22 @@
+{
+  "name": "Handshake",
+  "steps": [
+    {
+      "op": "connect"
+    },
+    {
+      "op": "send",
+      "type": "HELLO",
+      "request_id": 11,
+      "payload_utf8": "netlab-conformance"
+    },
+    {
+      "op": "expect",
+      "type": "HELLO_ACK",
+      "request_id": 11
+    },
+    {
+      "op": "close"
+    }
+  ]
+}

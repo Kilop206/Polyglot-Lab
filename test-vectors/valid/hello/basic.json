@@ -1,0 +1,11 @@
+{
+  "name": "hello basic",
+  "valid": true,
+  "message_type": "HELLO",
+  "message_type_code": "0x01",
+  "request_id": 1,
+  "flags": 0,
+  "payload_hex": "6E65746C61622D746573742D636C69656E74",
+  "wire_hex": "4E4C0101000000000012000000016E65746C61622D746573742D636C69656E74",
+  "sha256": "ce0c16801a09b22640b7edfd0b5c039275efe62cd248e24c899a7889f2262760"
+}

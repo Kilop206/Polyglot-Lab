@@ -1,0 +1,7 @@
+{
+  "host": "127.0.0.1",
+  "port": 7000,
+  "protocol_version": 1,
+  "max_payload_bytes": 1048576,
+  "connect_timeout_seconds": 2.0
+}

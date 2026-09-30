@@ -1,0 +1,24 @@
+{
+  "name": "PING/PONG",
+  "steps": [
+    {
+      "op": "connect"
+    },
+    {
+      "op": "handshake"
+    },
+    {
+      "op": "send",
+      "type": "PING",
+      "request_id": 42
+    },
+    {
+      "op": "expect",
+      "type": "PONG",
+      "request_id": 42
+    },
+    {
+      "op": "close"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "host": "CHANGE_ME",
+  "port": 7000,
+  "notes": "Record client/server hardware and network topology with published results."
+}

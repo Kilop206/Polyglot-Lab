@@ -1,0 +1,7 @@
+{
+  "name": "unknown-type basic",
+  "valid": false,
+  "expected_error": "INVALID_MESSAGE_TYPE",
+  "wire_hex": "4E4C019900000000000000000001",
+  "sha256": "22159129f1c271ca118f6879100bc15dc1360fac9b321f1613ea34aeb4bb395a"
+}

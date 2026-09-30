@@ -1,0 +1,7 @@
+{
+  "name": "payload-too-large basic",
+  "valid": false,
+  "expected_error": "PAYLOAD_TOO_LARGE",
+  "wire_hex": "4E4C012000000010000100000004",
+  "sha256": "7065946453b86632462971f0ba2031f1942b8243aefa809d4e2fa42f8fcb0187"
+}

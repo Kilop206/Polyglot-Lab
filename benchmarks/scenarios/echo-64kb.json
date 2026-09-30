@@ -1,0 +1,8 @@
+{
+  "name": "ECHO 64 KiB",
+  "message_type": "ECHO",
+  "response_type": "ECHO_RESULT",
+  "payload_size": 65536,
+  "warmup_requests": 10,
+  "requests": 200
+}

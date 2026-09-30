@@ -1,0 +1,25 @@
+{
+  "implementations": [
+    {
+      "name": "cpp-raw",
+      "enabled": false,
+      "host": "127.0.0.1",
+      "port": 7000,
+      "server_command": "./implementations/cpp/raw/build/netlab-server --port 7000"
+    },
+    {
+      "name": "rust-std",
+      "enabled": false,
+      "host": "127.0.0.1",
+      "port": 7000,
+      "server_command": "./implementations/rust/std/target/release/netlab-server --port 7000"
+    },
+    {
+      "name": "go-std",
+      "enabled": false,
+      "host": "127.0.0.1",
+      "port": 7000,
+      "server_command": "./implementations/go/std/netlab-server --port 7000"
+    }
+  ]
+}

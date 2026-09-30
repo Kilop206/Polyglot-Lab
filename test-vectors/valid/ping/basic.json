@@ -1,0 +1,11 @@
+{
+  "name": "ping basic",
+  "valid": true,
+  "message_type": "PING",
+  "message_type_code": "0x10",
+  "request_id": 42,
+  "flags": 0,
+  "payload_hex": "",
+  "wire_hex": "4E4C01100000000000000000002A",
+  "sha256": "3320303d30b767c388b4e4410eaa3a31530a5082c9f7484f2106737a3e444a95"
+}

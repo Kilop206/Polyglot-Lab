@@ -1,0 +1,7 @@
+{
+  "name": "length-mismatch truncated-payload",
+  "valid": false,
+  "expected_error": "INCOMPLETE_FRAME",
+  "wire_hex": "4E4C012000000000000500000002",
+  "sha256": "9c23ed16ad6f074add8a7cb7c15735beb4dc52c98aa792e404f87ef6be64d899"
+}

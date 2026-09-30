@@ -1,0 +1,26 @@
+{
+  "name": "ECHO round trip",
+  "steps": [
+    {
+      "op": "connect"
+    },
+    {
+      "op": "handshake"
+    },
+    {
+      "op": "send",
+      "type": "ECHO",
+      "request_id": 100,
+      "payload_utf8": "hello NetLab"
+    },
+    {
+      "op": "expect",
+      "type": "ECHO_RESULT",
+      "request_id": 100,
+      "payload_utf8": "hello NetLab"
+    },
+    {
+      "op": "close"
+    }
+  ]
+}

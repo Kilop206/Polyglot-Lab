@@ -1,0 +1,21 @@
+{
+  "name": "Request before HELLO",
+  "steps": [
+    {
+      "op": "connect"
+    },
+    {
+      "op": "send",
+      "type": "PING",
+      "request_id": 9
+    },
+    {
+      "op": "expect_error",
+      "request_id": 9,
+      "error": "INVALID_STATE"
+    },
+    {
+      "op": "close"
+    }
+  ]
+}

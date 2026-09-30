@@ -1,0 +1,39 @@
+{
+  "name": "Multiple frames in one TCP write",
+  "steps": [
+    {
+      "op": "connect"
+    },
+    {
+      "op": "handshake"
+    },
+    {
+      "op": "send_combined",
+      "frames": [
+        {
+          "type": "PING",
+          "request_id": 601
+        },
+        {
+          "type": "ECHO",
+          "request_id": 602,
+          "payload_utf8": "second"
+        }
+      ]
+    },
+    {
+      "op": "expect",
+      "type": "PONG",
+      "request_id": 601
+    },
+    {
+      "op": "expect",
+      "type": "ECHO_RESULT",
+      "request_id": 602,
+      "payload_utf8": "second"
+    },
+    {
+      "op": "close"
+    }
+  ]
+}

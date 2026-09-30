@@ -1,0 +1,25 @@
+{
+  "name": "Reject reserved flags",
+  "steps": [
+    {
+      "op": "connect"
+    },
+    {
+      "op": "handshake"
+    },
+    {
+      "op": "send",
+      "type": "PING",
+      "request_id": 701,
+      "flags": 1
+    },
+    {
+      "op": "expect_error",
+      "request_id": 701,
+      "error": "INVALID_FLAGS"
+    },
+    {
+      "op": "close"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "INFO schema",
+  "steps": [
+    {
+      "op": "connect"
+    },
+    {
+      "op": "handshake"
+    },
+    {
+      "op": "send",
+      "type": "INFO",
+      "request_id": 7
+    },
+    {
+      "op": "expect_info",
+      "request_id": 7
+    },
+    {
+      "op": "close"
+    }
+  ]
+}

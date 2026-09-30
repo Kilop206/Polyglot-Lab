@@ -1,0 +1,45 @@
+# Build outputs
+build/
+out/
+dist/
+target/
+bin/
+obj/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+
+# Tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+
+# IDEs/editors
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime outputs
+*.log
+conformance/reports/*
+!conformance/reports/.gitkeep
+benchmarks/results/*
+!benchmarks/results/.gitkeep
+
+# Temporary files
+.tmp/
+tmp/
