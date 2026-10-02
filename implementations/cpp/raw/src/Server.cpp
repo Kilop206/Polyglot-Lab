@@ -1,8 +1,101 @@
 #include "Server.hpp"
 
+#include "Decoder.hpp"
+#include "Encoder.hpp"
+
 namespace netlab {
     int Server::createServer() {
+
+        Decoder decoder;
+        Encoder encode;
+
         #if defined(_WIN32) || defined(_WIN64)
+
+        // Initialize Winsock
+        WSADATA wsaData;
+        int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
+        if (result != 0) {
+            std::cerr << "Error at initializing the Winsock: " << result << std::endl;
+            return 1;
+        }
+
+        struct addrinfo* hints = NULL;
+        struct addrinfo* ptr = NULL;
+        struct addrinfo zeroHints;
+
+        ZeroMemory(&zeroHints, sizeof(zeroHints));
+        zeroHints.ai_family = AF_INET;       // IPv4
+        zeroHints.ai_socktype = SOCK_STREAM; // TCP
+        zeroHints.ai_protocol = IPPROTO_TCP;
+        zeroHints.ai_flags = AI_PASSIVE;     // Bind to local IP
+
+        // Resolve the address and the port
+        result = getaddrinfo(NULL, "7000", &zeroHints, &hints);
+        if (result != 0) {
+            std::cerr << "getaddrinfo failed: " << result << std::endl;
+            WSACleanup();
+            return 1;
+        }
+
+        // Create the listening socket
+        SOCKET listenSocket = INVALID_SOCKET;
+        listenSocket = socket(hints->ai_family, hints->ai_socktype, hints->ai_protocol);
+        if (listenSocket == INVALID_SOCKET) {
+            std::cerr << "Error creating the socket: " << WSAGetLastError() << std::endl;
+            freeaddrinfo(hints);
+            WSACleanup();
+            return 1;
+        }
+
+        // Bind the socket
+        result = bind(listenSocket, hints->ai_addr, (int)hints->ai_addrlen);
+        if (result == SOCKET_ERROR) {
+            std::cerr << "Build error: " << WSAGetLastError() << std::endl;
+            freeaddrinfo(hints);
+            closesocket(listenSocket);
+            WSACleanup();
+            return 1;
+        }
+
+        freeaddrinfo(hints);
+
+        // Listen by connections
+        if (listen(listenSocket, SOMAXCONN) == SOCKET_ERROR) {
+            std::cerr << "Error listening: " << WSAGetLastError() << std::endl;
+            closesocket(listenSocket);
+            WSACleanup();
+            return 1;
+        }
+
+        std::cout << "Server running at the port 7000. Awating connection" << std::endl;
+
+        // Accept a client connection
+        SOCKET clientSocket = INVALID_SOCKET;
+        clientSocket = accept(listenSocket, NULL, NULL);
+        if (clientSocket == INVALID_SOCKET) {
+            std::cerr << "Error accepting the client connection" << WSAGetLastError() << std::endl;
+            closesocket(listenSocket);
+            WSACleanup();
+            return 1;
+        }
+
+        std::cout << "Client connected" << std::endl;
+        closesocket(listenSocket);
+
+        // Receive and send data
+        char buffer[1024] = {0};
+        int bytesReceived = recv(clientSocket, buffer, sizeof(buffer) - 1, 0);
+        if  (bytesReceived > 0) {
+            std::cout << "Message received from the client: " << decoder.decode(buffer) << std::endl;
+            
+            const char* response = "Hello!";
+            send(clientSocket, response, strlen(response), 0);
+        }
+
+        // Cleaning and finishing
+        closesocket(listenSocket);
+        closesocket(clientSocket);
+        WSACleanup();
 
         #else if defined(__linux__)
 
@@ -34,7 +127,7 @@ namespace netlab {
             return 1;
         }
 
-        std::cout << "Server listening at the port " << address.sin_port << std::endl;
+        std::cout << "Server running at the port 7000. Awating connection" << std::endl;
 
         // Accept a client connection
         socklen_t addrlen = sizeof(address);
@@ -51,7 +144,7 @@ namespace netlab {
         char buffer[1024] = {0};
         ssize_t bytes_read = read(client_fd, buffer, sizeof(buffer) - 1);
         if (bytes_read > 0) {
-            std::cout << "Message received: " << buffer << std::endl;
+            std::cout << "Message received: " << decoder.decode(bytes_read) << std::endl;
         }
 
         // Answer the client

@@ -4,6 +4,11 @@
 
 #if defined(_WIN32) || defined(_WIN64)
 
+#include <winsock2.h>
+#include <ws2tcpip.h>
+
+#pragma comment(lib, "ws2_32.lib")
+
 #else if defined(__linux__)
 
 #include <cstring>
