@@ -7,7 +7,6 @@
 
 namespace netlab {
     class Encoder {
-        public :
         std::vector<std::uint8_t> encode(const Frame& frame);
     };
 }

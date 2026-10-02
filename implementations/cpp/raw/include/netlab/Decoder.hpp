@@ -5,8 +5,7 @@
 #include "Frame.hpp"
 
 namespace netlab {
-    class Encoder {
-        public :
-        Frame& encode(const std::vector<std::uint8_t> encodedFrame);
+    class Decoder {
+        const Frame& decode(const std::vector<std::uint8_t> encodedFrame);
     };
 }

@@ -5,7 +5,7 @@
 
 namespace netlab {
 
-    const Frame& encode(const std::vector<std::uint8_t> encodedFrame) {
+    const Frame& decode(const std::vector<std::uint8_t> encodedFrame) {
 
         auto encodedFrameVersion = std::bitset<8>(encodedFrame[0]).to_ulong();
         auto version = static_cast<std::uint8_t>(encodedFrameVersion);
